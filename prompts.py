@@ -28,7 +28,7 @@ PERFORMANCE_ANALYZING_PROMPT = """
 You are an **AI evaluator** responsible for analyzing the user’s decision-making skills in a **hospital management simulation**.
 
 🔹 The user played the role of **{role}**.
-🔹 Their responses to various scenarios were:
+🔹 Their 'concise' responses to various scenarios were:
 {response_history}
 
 🎯 **Your Task:**

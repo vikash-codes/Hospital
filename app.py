@@ -2,8 +2,8 @@ import streamlit as st
 from simulation import HappyHospitalSimulation
 import time  # For preloader delay
 
-st.title("🏥 Hospital Management Simulation")
-st.subheader("Type 'quit' or 'stop' at any time to exit.\n", divider="gray")
+st.title("🏥 :blue[Hospital Management Simulation]")
+st.subheader(":orange[Type 'quit' or 'stop' at any time to exit.]\n", divider="gray")
 
 # Initialize session state only once
 if "simulation" not in st.session_state:
@@ -27,13 +27,13 @@ def extract_role(scenario_text):
 
 if st.session_state.current_scenario:
     role = extract_role(st.session_state.current_scenario)
-    st.write(f"### Your Role: **{role}**")
-    st.write(f"📜 **Scenario:** {st.session_state.current_scenario}")
+    st.write(f":blue[### Your Role:] :orange[**{role}**]")
+    st.write(f"📜:blue[**Scenario:]** {st.session_state.current_scenario}")
 
     # ✅ Use session state for controlled input
-    user_response = st.text_area("📝 Your Response:", key="user_response")
+    user_response = st.text_area("📝 :blue[Your Response:]", key="user_response")
 
-    if st.button("Submit Response"):
+    if st.button(":blue[Submit Response]"):
         if user_response.strip():
             if user_response.lower() in ["quit", "stop"]:  # ✅ Handle user exit
                 with st.spinner("Generating summary report..."):

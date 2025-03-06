@@ -26,7 +26,7 @@ class SimulationAgent:
 class PerformanceAnalyzingAgent:
     def __init__(self, role):
         self.role = role
-        self.history = [SystemMessage(content=f"You analyze how well a hospital director performed as a {role}.")]
+        self.history = [SystemMessage(content=f"You analyze how well {role} performed the given scenario .")]
         self.responses = []
 
     def analyze_response(self, user_response, scenario):
